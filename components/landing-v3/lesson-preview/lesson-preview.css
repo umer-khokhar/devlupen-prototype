@@ -1,0 +1,44 @@
+[data-devlupen-landing] #lesson-preview {
+  --preview-stage-width: 94rem;
+  --preview-frame-width: 72rem;
+  --preview-gutter: clamp(0.75rem, 3vw, 2rem);
+  --preview-body-height: 26rem;
+  --preview-art-width: min(46vw, 41rem);
+}
+
+@media (min-width: 900px) {
+  [data-devlupen-landing] #lesson-preview {
+    --preview-body-height: clamp(30rem, 43vw, 36rem);
+  }
+}
+
+[data-devlupen-landing] [data-lesson-glass] {
+  --glass-edge: light-dark(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.08));
+  --glass-fill: light-dark(rgba(255, 255, 255, 0.65), rgba(20, 22, 26, 0.6));
+  --glass-shadow: 0 8px 32px rgba(17, 19, 24, 0.08);
+  --glass-radius: 1.5rem;
+  --accent-ink: #111318;
+  --lesson-title-size: clamp(1.5rem, 3vw, 2rem);
+
+  border: 1px solid var(--line);
+  border-radius: var(--glass-radius);
+  background: var(--surface-2);
+  box-shadow: var(--glass-shadow);
+}
+
+[data-devlupen-landing] [data-lesson-title] {
+  font-family: var(--heading-font);
+  font-size: var(--lesson-title-size);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.12;
+}
+
+@supports (backdrop-filter: blur(16px)) or (-webkit-backdrop-filter: blur(16px)) {
+  [data-devlupen-landing] [data-lesson-glass] {
+    border-color: var(--glass-edge);
+    background: var(--glass-fill);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+  }
+}

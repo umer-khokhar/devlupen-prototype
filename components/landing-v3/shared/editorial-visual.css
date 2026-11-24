@@ -1,0 +1,22 @@
+[data-devlupen-landing] [data-editorial-stage] {
+  --editorial-glass: light-dark(rgba(255, 255, 255, 0.72), rgba(20, 22, 26, 0.76));
+  --editorial-edge: light-dark(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1));
+  --editorial-shadow: 0 8px 32px rgba(17, 19, 24, 0.08);
+
+  background: var(--surface-2);
+}
+
+[data-devlupen-landing] [data-editorial-glass] {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--editorial-shadow);
+}
+
+@supports (backdrop-filter: blur(16px)) or (-webkit-backdrop-filter: blur(16px)) {
+  [data-devlupen-landing] [data-editorial-glass] {
+    background: var(--editorial-glass);
+    border-color: var(--editorial-edge);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+  }
+}

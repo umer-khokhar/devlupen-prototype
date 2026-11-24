@@ -1,0 +1,15 @@
+# Dependencies and generated output
+/node_modules/
+/.next/
+/out/
+/coverage/
+*.tsbuildinfo
+/next-env.d.ts
+
+# Local settings and secrets
+/.idea/
+.DS_Store
+.env*
+!.env.example
+!.env.*.example
+*.log
