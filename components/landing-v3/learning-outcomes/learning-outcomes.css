@@ -1,0 +1,44 @@
+.outcome-tab-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--muted) transparent;
+  scroll-padding-inline: 0.25rem;
+}
+
+.outcome-tab:hover {
+  background: var(--surface-2);
+  color: var(--text);
+}
+
+.outcome-tab[aria-selected="true"] {
+  background: var(--accent-tint);
+  color: var(--text);
+}
+
+[data-devlupen-landing] .outcome-tab:focus-visible {
+  outline-offset: -2px;
+}
+
+.outcome-glass {
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  box-shadow: 0 8px 32px rgba(17, 19, 24, 0.08);
+}
+
+@supports (backdrop-filter: blur(16px)) or (-webkit-backdrop-filter: blur(16px)) {
+  .outcome-glass {
+    border-color: light-dark(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.08));
+    background: light-dark(rgba(255, 255, 255, 0.65), rgba(20, 22, 26, 0.6));
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+  }
+}
+
+.outcome-window {
+  min-height: 26rem;
+}
+
+@media (min-width: 900px) {
+  .outcome-window {
+    min-height: clamp(30rem, 43vw, 36rem);
+  }
+}

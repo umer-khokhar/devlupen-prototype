@@ -36,7 +36,15 @@ export function MobileDrawer({ children }: MobileDrawerProps) {
         id={drawerId}
         aria-labelledby={titleId}
         onClick={(event) => {
-          if (event.target === event.currentTarget) drawer.current?.close();
+          const target = event.target;
+          if (
+            target === event.currentTarget ||
+            (target instanceof Element &&
+              target.closest('a[href^="#"]') &&
+              !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey)
+          ) {
+            drawer.current?.close();
+          }
         }}
         className="fixed inset-y-0 right-0 left-auto m-0 h-dvh max-h-none w-full max-w-xs border-l border-(--line) bg-(--surface) text-(--text) backdrop:bg-(--text)/25"
       >

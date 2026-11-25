@@ -1,5 +1,6 @@
 import { ArrowDown } from "lucide-react";
-import { LANDING_COPY } from "../shared/landing-copy";
+import Link from "next/link";
+import { LANDING_COPY, MODULES_HREF } from "../shared/landing-copy";
 import { StartLearningLink } from "../shared/start-learning-link";
 import { HERO_COPY } from "./hero-copy";
 
@@ -25,13 +26,13 @@ export function HeroSection() {
       </p>
       <div className="mt-7 flex flex-wrap justify-center gap-2.5 min-[900px]:mt-8">
         <StartLearningLink />
-        <span
-          aria-disabled="true"
-          className="inline-flex min-h-(--control-size) items-center justify-center gap-2 rounded-(--radius-pill) border border-(--line) px-4 text-sm font-medium text-(--muted)"
+        <Link
+          href={MODULES_HREF}
+          className="inline-flex min-h-(--control-size) items-center justify-center gap-2 rounded-(--radius-pill) border border-(--line) px-4 text-sm font-medium text-(--text) hover:bg-(--surface-2)"
         >
           {HERO_COPY.modulesAction}
           <ArrowDown size={15} aria-hidden="true" />
-        </span>
+        </Link>
       </div>
     </section>
   );

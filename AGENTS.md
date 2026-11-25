@@ -37,7 +37,7 @@ Define these as CSS custom properties **scoped to the landing page** (do not cha
 
 ```css
 :root {
-  --bg: #fcfaf8;
+  --bg: #ffffff;
   --surface: #ffffff;
   --surface-2: #f6f3ef;
   --line: #e8e4df;
@@ -76,7 +76,8 @@ Define these as CSS custom properties **scoped to the landing page** (do not cha
 **Colour rules**
 - `#FF580C` is the single accent. Use it on roughly 5 to 10 percent of the screen: highlighted headline words, icons, badges, borders, focus rings.
 - **Primary buttons are dark ink with white text** (inverted in dark mode). They are not orange.
-- Never put small white text on an orange fill (about 3:1 contrast). Use dark ink text on orange fills.
+- Use dark ink text on bright orange (`#FF580C`). Use off-white text on a darker orange only if the pairing meets WCAG AA.
+- Use only fully opaque backgrounds on or around buttons and icons, including selected and hover states and numbered badges, unless the owner explicitly requests transparency. Use a solid theme color with dark ink or off-white text that meets WCAG AA; do not use alpha-blended tints, opacity utilities, or translucent overlays for these fills.
 - Use `--accent-text` for small orange text and links.
 - Code panels stay dark in both modes.
 - Check the contrast of every text and background pairing, and report any that fail WCAG AA.

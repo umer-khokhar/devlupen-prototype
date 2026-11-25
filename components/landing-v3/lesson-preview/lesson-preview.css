@@ -1,7 +1,4 @@
 [data-devlupen-landing] #lesson-preview {
-  --preview-stage-width: 94rem;
-  --preview-frame-width: 72rem;
-  --preview-gutter: clamp(0.75rem, 3vw, 2rem);
   --preview-body-height: 26rem;
   --preview-art-width: min(46vw, 41rem);
 }

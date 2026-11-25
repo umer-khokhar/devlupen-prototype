@@ -8,7 +8,7 @@ import { LessonTabs } from "./lesson-tabs";
 
 export function LessonPreviewFrame() {
   return (
-    <div className="relative mx-auto max-w-(--preview-frame-width) px-2 pb-2 min-[900px]:px-3 min-[900px]:pb-3" data-lesson-glass>
+    <div className="relative px-2 pb-2 min-[900px]:px-3 min-[900px]:pb-3" data-lesson-glass>
       <div className="flex min-h-16 items-center justify-between gap-2 px-2 pt-3 min-[900px]:min-h-[4.5rem] min-[900px]:px-3 min-[900px]:pt-2">
         <div aria-hidden="true" className="flex items-center gap-2 text-(--accent)">
           <span className="size-3 rounded-full bg-current opacity-75" />

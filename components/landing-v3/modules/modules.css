@@ -1,0 +1,58 @@
+[data-devlupen-landing] #modules {
+  --module-accent-fill: light-dark(var(--accent), #c2410c);
+}
+
+[data-devlupen-landing] .module-roadmap-title {
+  background: color-mix(in srgb, var(--surface-2), var(--logo-ink) 12%);
+}
+
+[data-devlupen-landing] .module-roadmap-number {
+  background: var(--module-accent-fill);
+}
+
+[data-devlupen-landing] .module-roadmap-node:not(:last-child)::after {
+  position: absolute;
+  top: 3rem;
+  bottom: -0.75rem;
+  left: calc(1.5rem - 1px);
+  border-left: 2px dotted var(--accent-text);
+  opacity: 0.55;
+  content: "";
+}
+
+@media (min-width: 540px) {
+  [data-devlupen-landing] .module-roadmap-grid {
+    grid-template-rows: repeat(2, minmax(7.5rem, 1fr));
+  }
+
+  [data-devlupen-landing] .module-roadmap-grid[data-third-row] {
+    grid-template-rows: repeat(3, minmax(7.5rem, 1fr));
+  }
+
+  [data-devlupen-landing] .module-roadmap-wire {
+    /* Start at the first icon's center, with one SVG unit row per grid row. */
+    inset: 3.5rem 1.5rem auto;
+    width: calc(100% - 3rem);
+    height: calc(100% - 2.75rem);
+  }
+
+  [data-devlupen-landing] .module-roadmap-node:nth-child(4) {
+    grid-area: 2 / 3;
+  }
+
+  [data-devlupen-landing] .module-roadmap-node:nth-child(5) {
+    grid-area: 2 / 2;
+  }
+
+  [data-devlupen-landing] .module-roadmap-node:nth-child(6) {
+    grid-area: 2 / 1;
+  }
+
+  [data-devlupen-landing] .module-roadmap-node:nth-child(7) {
+    grid-area: 3 / 1;
+  }
+
+  [data-devlupen-landing] .module-roadmap-node:not(:last-child)::after {
+    display: none;
+  }
+}
